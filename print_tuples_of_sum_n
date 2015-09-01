@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a[10], n,l,s,count=0;
+	int c, d, b[10];
+	void tuples(int c[10], int m,int t);
+	
+	printf("enter no of elements\n");
+	scanf("%d", &n);
+	printf("enter the elements\n");
+	for (l = 0; l < n; l++)
+	{
+		scanf("%d", &a[l]);
+	}
+
+	for (c = 0; c<n; c++)
+	{
+		for (d = 0; d<count; d++)
+		{
+			if (a[c] == b[d])
+				break;
+		}
+
+		if (d == count)
+		{
+			b[count] = a[c];
+			count++;
+		}
+	} 
+	printf("enter sum value\n");
+	scanf("%d", &s);
+	tuples(b, n,s);
+	getch();
+}
+void tuples(int c[10], int m, int t)
+{
+	int i, j;
+	
+
+		for (i = 0,j=1; i < m,j<m; i++,j++)
+		{
+			
+	
+				if ((c[i] + c[j]) == t)
+				{
+					printf("%5d%5d", c[i], c[j]);
+
+				}
+		
+		}
+	
+}
