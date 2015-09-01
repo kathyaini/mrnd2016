@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<conio.h>
 int main()
-{
+{ 
 	char s1[20], i = 0, s;
 	char repeat(char t1[20], int k);
 	printf("enter string1\n");
